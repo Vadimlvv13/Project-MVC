@@ -1,7 +1,9 @@
 <?php
 
 require __DIR__ . '/../lib/dev.php';
-debug($test);
+
+debug();
+
 echo 'Hello!';
 
 ?>
