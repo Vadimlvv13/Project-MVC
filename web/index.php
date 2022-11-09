@@ -1,9 +1,9 @@
 <?php
 
-namespace app\web;
+namespace Web;
 require __DIR__ . '/../lib/dev.php';
 
-use app\core\Router;
+use \core\Router;
 
 spl_autoload_register(function($class) {
     $path = str_replace('\\', '/', $class . '.php');
