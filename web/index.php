@@ -3,7 +3,7 @@
 namespace Web;
 require __DIR__ . '/../lib/dev.php';
 
-use \core\Router;
+use \Core\Router;
 
 spl_autoload_register(function($class) {
     $path = str_replace('\\', '/', $class . '.php');
