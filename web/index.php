@@ -1,6 +1,6 @@
 <?php
 
-require '/lib/dev.php';
+require '/../lib/dev.php';
 
 echo 'Hello!';
 
