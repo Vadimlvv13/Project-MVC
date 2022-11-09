@@ -1,7 +1,7 @@
 <?php
 
 namespace web;
-require __DIR__ . '/../lib/dev.php';
+require __DIR__ . '/lib/dev.php';
 
 use core\Router;
 
