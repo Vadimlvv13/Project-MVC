@@ -4,18 +4,17 @@ namespace web;
 require __DIR__ . '/lib/dev.php';
 
 use core\Router;
+use lib\Db;
 
 spl_autoload_register(function($class) {
-    echo $path.'<br>';
     $path = str_replace('\\', '/', $class . '.php');
-    echo $path;
     if (file_exists($path)) {
         require $path;
     }
 });
 
 $router = new Router;
-
+$router = new Db;
 //debug();
 
 //echo 'Hello!';
