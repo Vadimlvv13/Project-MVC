@@ -2,7 +2,7 @@
 
 namespace lib;
 
-class Db {
+class db {
     
     function __construct() {
         echo 'I am class Db';
