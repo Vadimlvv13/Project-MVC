@@ -7,7 +7,8 @@ class Router {
     protected $params = [];
 
     public function __construct() {
-        //
+        $arr = require 'config/routes.php';
+        debug($arr);
     }
 
     public function add() {
