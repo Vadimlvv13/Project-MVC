@@ -34,7 +34,7 @@ class Router {
     public function run() {
         if ($this->match()) {
             $controller = 'controllers\\' . ucfirst($this->params['controller']) . 'Controller.php';
-            if (class_exist($controller)) {
+            if (class_exists($controller)) {
                 echo 'Ok';
             } else {
                 echo 'Не знайдено: ' . $controller;
