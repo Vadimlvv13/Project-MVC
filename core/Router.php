@@ -33,8 +33,10 @@ class Router {
 
     public function run() {
         if ($this->match()) {
-            echo '<p>controller: <b>' . $this->params['controller'] . '</b></p>';
-            echo '<p>action: <b>' . $this->params['action'] . '</b></p>';
+            $controller = 'controllers\\' . ucfirst($this->params['controller']) . 'Controller.php';
+            echo $controller;
+            //echo '<p>controller: <b>' . $this->params['controller'] . '</b></p>';
+            //echo '<p>action: <b>' . $this->params['action'] . '</b></p>';
         } else {
             echo '<H1>ERROR 404: Page not found!</H1>';
         }
