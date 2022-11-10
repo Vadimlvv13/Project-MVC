@@ -11,7 +11,7 @@ class Router {
         foreach ($arr as $key => $val) {
             $this->add($key, $val);
         }
-        debug($this->routes);
+        //debug($this->routes);
     }
 
     public function add($route, $params) {
@@ -20,7 +20,8 @@ class Router {
     }
 
     public function match() {
-        //
+        debug($_SERVER);
+        $url = $_SERVER['REQUEST_URI'];
     }
 
     public function run() {
