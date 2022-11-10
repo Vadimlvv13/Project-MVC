@@ -23,13 +23,18 @@ class Router {
         $url = trim($_SERVER['REQUEST_URI'], '/');
         foreach ($this->routes as $route => $params) {
             if (preg_match($route, $url, $matches)) {
-                var_dump($matches);
+                $this->params = $params;
+                return thrue;
+                //var_dump($matches);
             }
         }
+        return false;
     }
 
     public function run() {
-        $this->match();
+        if ($this->match()) {
+            echo 'Маршрут знайдений';
+        }
         //echo 'start';
     }
 
