@@ -24,7 +24,7 @@ class Router {
         foreach ($this->routes as $route => $params) {
             if (preg_match($route, $url, $matches)) {
                 $this->params = $params;
-                return thrue;
+                return true;
                 //var_dump($matches);
             }
         }
