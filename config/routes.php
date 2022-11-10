@@ -1,6 +1,11 @@
 <?php
 
 return [
+    'web/index' => [
+        'controller' => 'web',
+        'action' => 'index',
+    ],
+
     'account/login' => [
         'controller' => 'account',
         'action' => 'login',
