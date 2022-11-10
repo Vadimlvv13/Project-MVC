@@ -25,7 +25,8 @@ class Router {
     }
 
     public function run() {
-        echo 'start';
+        $this->match();
+        //echo 'start';
     }
 
 }
