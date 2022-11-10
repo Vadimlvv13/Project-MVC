@@ -20,8 +20,12 @@ class Router {
     }
 
     public function match() {
-        debug($_SERVER);
-        $url = $_SERVER['REQUEST_URI'];
+        $url = trim($_SERVER['REQUEST_URI'], '/');
+        foreach ($this->routes as $route => $params) {
+            if (preg_match($route, $url, $matches)) {
+                var_dump($matches);
+            }
+        }
     }
 
     public function run() {
