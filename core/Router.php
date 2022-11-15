@@ -36,7 +36,7 @@ class Router {
             $path = 'controllers\\'.ucfirst($this->params['controller']).'Controller';
             if (class_exists($path)) {
                 $action = $this->params['action'].'Action';
-                if (method_exsists($path, $action)) {
+                if (method_exists($path, $action)) {
                     $controller = new $path;
                     $controller->$action();
                 } else {
