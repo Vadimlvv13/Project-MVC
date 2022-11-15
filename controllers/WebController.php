@@ -4,7 +4,7 @@ namespace controllers;
 
 use core\Controller;
 
-class MainController extends Controller {
+class WebController extends Controller {
     
     public function indexAction() {
         echo 'Домашня сторінка';
