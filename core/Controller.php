@@ -4,8 +4,10 @@ namespace core;
 
 abstract class Controller {
 
-    public function __construct() {
-        echo '<p>Hello!</p>';
+    public $route;
+
+    public function __construct($route) {
+        $this->route = $route;
     }
 }
 
