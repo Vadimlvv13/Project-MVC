@@ -15,7 +15,7 @@ class Router {
     }
 
     public function add($route, $params) {
-        $route = '#^' . $route . '$#';
+        $route = '#^'.$route.'$#';
         $this->routes[$route] = $params;
     }
 
@@ -33,14 +33,19 @@ class Router {
 
     public function run() {
         if ($this->match()) {
-            $controller = 'controllers\\' . ucfirst($this->params['controller']) . 'Controller.php';
-            if (class_exists($controller)) {
-                echo 'Ok';
+            $path = 'controllers\\'.ucfirst($this->params['controller']).'Controller.php';
+            if (class_exists($path)) {
+                $action = $this->params['action'].'Action';
+                if (method_exsists($path, $action)) {
+                    //
+                } else {
+                    echo 'Не знайдено екшн: '.$action;
+                }
             } else {
-                echo 'Не знайдено: ' . $controller;
+                echo 'Не знайдено контроллер: '.$path;
             }
-            //echo '<p>controller: <b>' . $this->params['controller'] . '</b></p>';
-            //echo '<p>action: <b>' . $this->params['action'] . '</b></p>';
+            //echo '<p>controller: <b>'.$this->params['controller'].'</b></p>';
+            //echo '<p>action: <b>'.$this->params['action'].'</b></p>';
         } else {
             echo '<H1>ERROR 404: Page not found!</H1>';
         }
