@@ -8,7 +8,7 @@ class View {
     public $layout = 'default';
 
     public function __construct() {
-        
+        echo 'View';
     }
 
 }
