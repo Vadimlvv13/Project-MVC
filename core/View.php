@@ -14,10 +14,14 @@ class View {
     }
 
     public function render($title, $vars = []) {
-        ob_start();
-        require 'views/'.$this->path.'.php';
-        $content = ob_get_clean();
-        require 'views/layouts/'.$this->layout.'.php';
+        if (file_exists('views/'.$this->path.'.php')) {
+            ob_start();
+            require 'views/'.$this->path.'.php';
+            $content = ob_get_clean();
+            require 'views/layouts/'.$this->layout.'.php';
+        } else {
+            echo 'ERROR: View '.$this->path.' not found!';
+        }
     }
 }
 ?>
