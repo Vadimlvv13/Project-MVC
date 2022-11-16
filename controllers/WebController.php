@@ -7,7 +7,8 @@ use core\Controller;
 class WebController extends Controller {
     
     public function indexAction() {
-        echo 'Домашня сторінка';
+        $this->view->render('Головна сторінка');
+        //echo 'Домашня сторінка';
     }
 
 }
