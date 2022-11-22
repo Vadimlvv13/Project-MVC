@@ -2,6 +2,8 @@
 
 namespace core;
 
+use core\View;
+
 class Router {
     protected $routes = [];
     protected $params = [];
@@ -40,15 +42,15 @@ class Router {
                     $controller = new $path($this->params);
                     $controller->$action();
                 } else {
-                    echo 'Не знайдено екшн: '.$action;
+                    View::errorCode(404);
                 }
             } else {
-                echo 'Не знайдено контроллер: '.$path;
+                View::errorCode(404);
             }
             //echo '<p>controller: <b>'.$this->params['controller'].'</b></p>';
             //echo '<p>action: <b>'.$this->params['action'].'</b></p>';
         } else {
-            echo '<H1>ERROR 404: Page not found!</H1>';
+            View::errorCode(404);
         }
         //echo 'start';
     }
