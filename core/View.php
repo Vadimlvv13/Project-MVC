@@ -24,5 +24,10 @@ class View {
             echo 'ERROR: View '.$this->path.' not found!';
         }
     }
+
+    public static function errorCode($code) {
+        http_response_code($code);
+        require 
+    }
 }
 ?>
