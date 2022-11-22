@@ -27,7 +27,8 @@ class View {
 
     public static function errorCode($code) {
         http_response_code($code);
-        require 
+        require 'views/errors/'.$code.'.php';
+        exit;
     }
 }
 ?>
