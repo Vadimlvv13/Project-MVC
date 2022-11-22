@@ -25,10 +25,16 @@ class View {
         }
     }
 
+    public function redirect($url) {
+        header('location: '.$url);
+        exit;
+    }
+    
     public static function errorCode($code) {
         http_response_code($code);
         require 'views/errors/'.$code.'.php';
         exit;
     }
+
 }
 ?>
