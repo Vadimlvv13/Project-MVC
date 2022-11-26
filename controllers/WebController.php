@@ -10,7 +10,8 @@ class WebController extends Controller {
     public function indexAction() {
         $db = new Db;
         $this->view->render('Головна сторінка');
-        //echo 'Домашня сторінка';
+        $data = $db->query('SELECT name FROM user WHERE id = 1');
+        debug($data);
     }
 
 }
