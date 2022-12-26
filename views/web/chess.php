@@ -8,5 +8,8 @@
 </head>
 <body>
     <h1>Online chess</h1>
+    <div class="board">
+        
+    </div>
 </body>
 </html>
