@@ -18,9 +18,9 @@ class WebController extends Controller {
         //debug($data);
     }
 
-    public function chessActin(){
+    public function chessAction(){
 
-        return $this->view->render('chess',[]);
+        return $this->render('chess',[]);
     }
 
 }
