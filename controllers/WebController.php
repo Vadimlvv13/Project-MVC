@@ -20,7 +20,7 @@ class WebController extends Controller {
 
     public function chessAction(){
 
-        return $this->render('chess',[]);
+        return $this->view->render('chess',[]);
     }
 
 }
