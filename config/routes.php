@@ -15,6 +15,11 @@ return [
         'controller' => 'news',
         'action' => 'show',
     ],
+
+    'web/chess' => [
+        'controller' => 'web',
+        'action' => 'chess',
+    ],
 ];
 
 ?>
