@@ -18,6 +18,11 @@ class WebController extends Controller {
         //debug($data);
     }
 
+    public function chessActin(){
+
+        return $this->render('chess',[]);
+    }
+
 }
 
 ?>
