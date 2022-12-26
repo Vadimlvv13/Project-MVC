@@ -15,7 +15,7 @@ class WebController extends Controller {
             'id' => 1,
         ];
         $data = $db->column('SELECT name FROM user WHERE id = :id', $params);
-        debug($data);
+        //debug($data);
     }
 
 }
